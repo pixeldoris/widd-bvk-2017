@@ -3,12 +3,12 @@ const gulp = require('gulp');
 const tasks = require('strt-gulptasks')({
   source: 'src',
   output: 'public/dist',
+  browsers: ['ie 11', 'last 2 versions'],
   scripts: {
     publicPath: '/dist/scripts',
   },
   serve: {
-    server: 'public',
-    files: ['public/*.html'],
+    proxy: 'http://bvk.dev/',
   }
 });
 
@@ -16,26 +16,20 @@ gulp.task('default', gulp.series(
   tasks.clean,
   gulp.parallel(
     tasks.styles,
+    tasks.scripts,
     tasks.images,
-    tasks.files,
     tasks.icons,
-    tasks.scripts
+    tasks.files,
+    tasks.serve
   ),
-  tasks.serve
+  tasks.watch
 ));
 
 gulp.task('production', gulp.series(
-  function setProdEnv(done) {
-    process.env.NODE_ENV = 'production';
-    done();
-  },
-  tasks.clean,
   gulp.parallel(
     tasks.styles,
+    tasks.scripts,
     tasks.images,
-    tasks.files,
-    tasks.icons,
-    tasks.scripts
+    tasks.files
   )
 ));
-

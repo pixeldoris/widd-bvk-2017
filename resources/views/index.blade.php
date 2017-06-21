@@ -2,6 +2,12 @@
 
 @section('content')
 
-<p class="title -h2">Här kommer content att hamna</p>
+@include('components.bigImage')
+
+@include('components.services')
+
+@include('components.slideshow')
+
+@include('components.certifications')
 
 @endsection

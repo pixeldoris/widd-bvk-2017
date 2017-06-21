@@ -1,0 +1,182 @@
+#brand {
+  padding: 20px 6%;
+}
+
+.brand-logo img {
+  width: 90%;
+}
+
+.brand-info {
+  list-style: none;
+}
+
+.brand-info li {
+  position: relative;
+  display: inline-block;
+  padding: 20px 20px 0;
+}
+
+.brand-info li:before {
+  content: '';
+  position: absolute;
+  top: 30%;
+  right: 0;
+  width: 1px;
+  height: 80%;
+  background: #dedede;
+}
+
+.brand-info li:last-child:before {
+  width: 0;
+}
+
+.navbar {
+  z-index: +1;
+  border-radius: 0;
+  width: 88%;
+  padding: 5px 0;
+}
+
+.navbar-inverse {
+  border: none;
+  background: none;
+}
+
+.nav-bg {
+  height: 60px;
+  width: 88%;
+  margin: auto;
+  background: #131315;
+}
+
+.nav li {
+  padding: 0 10px;
+  height: 70px;
+  margin-top: -10px;
+}
+
+.nav li:hover {
+  background: #ff600c;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  position: relative;
+  top: 50%;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transform: translateY(-50%);
+}
+
+.navbar-padding {
+  padding-left: 0;
+  margin-left: -15px;
+}
+
+.fixed {
+  z-index: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateZ(0);
+}
+
+.nav-placeholder {
+  position: absolute;
+  z-index: 500;
+  margin: 0 auto;
+  padding: 0;
+  width: 100%;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  padding: 10px 20px;
+  height: auto;
+  margin: 0;
+  background: #131315;
+}
+
+.dropdown-menu > li > a {
+  padding: 0;
+  color: #ffffff;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.dropdown-menu > li > a:focus,
+.dropdown-menu > li > a:hover {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #ff600c;
+}
+
+.dropdown-menu {
+  border-radius: 0;
+  border: none;
+  padding: 0;
+  padding-top: 10px;
+  background: none;
+  -webkit-background-clip: none;
+  background-clip: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.header-front {
+  position: relative;
+  margin-top: 30px;
+  height: 85vh;
+  min-height: 150px;
+  text-align: left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(images/header2.png);
+  background-position: center;
+}
+
+.header {
+  position: relative;
+  margin-top: 30px;
+  height: 40vh;
+  min-height: 150px;
+  text-align: left;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-image: url(images/header3.png);
+  background-position: center;
+}
+
+.header-linebreak {
+  height: 2px;
+  width: 10%;
+  background: #ff600c;
+}
+
+.container-header-front {
+  position: absolute;
+  top: 50%;
+  margin: 0% 5% 0 45%;
+  width: 50%;
+  color: #ffffff;
+  transform: translateY(-50%);
+}
+
+.container-header {
+  position: absolute;
+  top: 50%;
+  width: 50%;
+  margin: 0% 5% 0 160px;
+  color: #ffffff;
+  transform: translateY(-50%);
+}

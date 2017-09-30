@@ -1,0 +1,88 @@
+.services-tabs {
+  & .services-tabs-nav {
+    padding: 10px 15px 0;
+    width: 100%;
+    cursor: pointer;
+
+    & .link {
+      display: block;
+      margin-bottom: 5px;
+      width: 100%;
+      padding: 12px;
+      color: white;
+      font-weight: 600;
+      background-color: map-get($colors, darkgrey);
+      transition: color 0.3s;
+      cursor: pointer;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: map-get($colors, offblack);
+        cursor: pointer;
+      }
+
+      &.-active {
+        color: map-get($colors, white);
+        background-color: map-get($colors, orange);
+        cursor: pointer;
+      }
+
+      & > i,
+      & > span {
+        margin: 0;
+        padding: 0;
+        line-height: 1;
+      }
+
+      & > i {
+        font-size: 18px;
+      }
+
+      & > span {
+        display: none;
+        font-size: 18px;
+      }
+    }
+  }
+
+  & .tab {
+    display: none;
+
+    &.-active {
+      display: block;
+    }
+
+    & .content {
+      padding: 1.5rem;
+    }
+  }
+}
+
+.services-infosection {
+  padding: 0;
+
+  & .infobox {
+    display: none;
+
+    &.-active {
+      display: block;
+    }
+
+    & .-text {
+      padding: 0 15px 15px;
+    }
+
+    & .-image {
+      padding: 0 15px 25px;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    & .infobox {
+      padding: 40px 0;
+    }
+  }
+}

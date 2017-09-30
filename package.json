@@ -15,6 +15,7 @@
     "jquery": "^3.2.1",
     "js-polyfills": "^0.1.33",
     "reset-css": "^2.2.0",
+    "slick-carousel": "^1.6.0",
     "strt-gulptasks": "^4.0.7",
     "svgxuse": "^1.2.3"
   },
@@ -44,4 +45,3 @@
     }
   }
 }
-

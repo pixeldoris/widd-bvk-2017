@@ -11,7 +11,18 @@
 |
 */
 
-Route::get('/', 'PagesController@index');
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/', 'PagesController@index');
+
+    Route::get('/new', 'PagesController@new');
+    Route::get('/tjanster', 'PagesController@services');
+    Route::get('/om-oss', 'PagesController@about');
+    Route::get('/galleri', 'PagesController@gallery');
+    Route::get('/samarbetpartners', 'PagesController@partners');
+    Route::get('/kontakt', 'PagesController@contact');
+    Route::get('/admin', 'AdminPagesController@index');
+    Route::put('user/edit/contact', 'UserController@editContactInformation')->name('edit_contact_information');
+});
 
 Auth::routes();
 

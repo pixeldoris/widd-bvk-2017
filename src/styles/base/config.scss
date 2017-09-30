@@ -1,7 +1,11 @@
 // Colors
 $colors: (
   black: #000000,
+  offblack: #101010,
   white: #ffffff,
+  darkgray: #303033,
+  lightgray: #f3f3f3,
+  bvkgray: #dedede,
   gray900: #212121,
   gray800: #424242,
   gray700: #616161,
@@ -13,13 +17,14 @@ $colors: (
   gray100: #fafafa,
   red: #e74141,
   blue: #4196e7,
-  orange: #ff5825,
+  orange: #ff600c,
   yellow: #ffcd00,
 );
 
 // Font
-$font-family: BlinkMacSystemFont, Helvetica, sans-serif;
+$font-family: Roboto, BlinkMacSystemFont, Helvetica, sans-serif !important;
 $font-family-alt: Georgia, serif;
+$font-size: 13px;
 
 // Breakpoints
 $breakpoints: (

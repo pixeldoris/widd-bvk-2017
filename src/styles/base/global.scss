@@ -4,15 +4,21 @@
   box-sizing: inherit;
 }
 
+/* changed overflow-y (overflow-y: scroll;) and added min-height */
 html {
   box-sizing: border-box;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+  min-height: 100vh;
 }
 
+/* added display, flex-direction and min-height */
 body {
   min-width: 320px;
   cursor: default;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
   &::after {
     display: none;
@@ -26,18 +32,44 @@ body {
   }
 }
 
+/* added width */
 img {
   display: inline-block;
   vertical-align: middle;
   max-width: 100%;
   height: auto;
+  width: auto;
   -ms-interpolation-mode: bicubic;
 }
 
-// img {
-//   width: 100%;
-// }
+.margin-top {
+  @for $i from 1 through 50 {
+    &-#{$i} {
+      margin-top: #{$i}px;
+    }
+  }
+}
 
-.bg-grey {
-  background: #f3f3f3;
+.margin-bottom {
+  @for $i from 1 through 50 {
+    &-#{$i} {
+      margin-bottom: #{$i}px;
+    }
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 960px) {
+  .tablet-hidden {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 559px) {
+  .mobile-hidden {
+    display: none;
+  }
 }

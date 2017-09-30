@@ -1,17 +1,23 @@
 .button {
   @include reset-button;
-  padding: 15px 24px;
-  border-radius: 3px;
-  font-size: 1.4rem;
+  padding: 10px;
+  border-radius: 21px;
+  font-size: 14px;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.5px;
   color: map-get($colors, white);
-  background: map-get($colors, blue);
+  background: map-get($colors, orange);
   transition: all 200ms ease;
 
   &:focus,
   &:hover {
-    background: darken(map-get($colors, blue), 4%);
+    background: map-get($colors, black);
+    -moz-transition: 0.5s ease-in-out;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+
+  &.-margin-tb-10-40 {
+    margin: 10px 0 40px;
   }
 }

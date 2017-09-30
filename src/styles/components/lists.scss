@@ -1,0 +1,153 @@
+ul,
+ol {
+  list-style-type: none;
+
+  &.list-inline {
+    & > li {
+      display: inline-block;
+    }
+
+    @media screen and (max-width: 560px) {
+      & > li {
+        display: inline-block;
+      }
+    }
+
+    &.certificate {
+      &.-header {
+        & > li {
+          position: relative;
+          padding: 20px;
+
+          & > span {
+            display: table;
+
+            &.strong {
+              font-size: 16px;
+            }
+
+            &.name {
+              margin-top: 4px;
+              font-size: 13px;
+              font-weight: 200;
+            }
+
+            @media screen and (max-width: 560px) {
+              &.strong {
+                font-size: 14px;
+              }
+
+              &.name {
+                margin-top: 5px;
+                font-size: 13px;
+              }
+            }
+          }
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 20%;
+            right: 0;
+            width: 1px;
+            height: 60%;
+            background: #dedede;
+          }
+
+          &:last-child::before {
+            width: 0;
+          }
+        }
+
+        @media screen and (max-width: 560px) {
+          & > li {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &.vertical {
+    display: block;
+  }
+}
+
+.navbar {
+  & > ul {
+    position: absolute;
+
+    & > li {
+      position: relative;
+      margin-top: -6px;
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+
+      &:hover {
+        //outline: 3px solid map-get($colors, orange);
+        background: map-get($colors, orange);
+        cursor: pointer;
+      }
+
+      & > a {
+        display: block;
+        padding: 30px 20px;
+      }
+
+      &.nav-burger {
+        display: none;
+      }
+
+      @media screen and (max-width: 960px) {
+        &.nav-burger {
+          display: inline-block;
+        }
+
+        &.desktop-nav {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.dropdown {
+  position: relative;
+
+  & > ul {
+    position: absolute;
+    z-index: 1000;
+    padding-top: 15px;
+    display: none;
+    min-width: 180px;
+
+    & > li {
+      background: map-get($colors, offblack);
+
+      &:hover {
+        background: map-get($colors, orange);
+      }
+
+      & > a {
+        padding: 15px 10px;
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+    background: map-get($colors, orange);
+
+    & > ul {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .nav-burger {
+    display: block;
+  }
+}

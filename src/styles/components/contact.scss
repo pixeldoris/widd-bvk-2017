@@ -1,0 +1,18 @@
+.contact-details {
+  padding: 0 15px 50px;
+
+  & a {
+    color: map-get($colors, offblack);
+
+    &:hover {
+      color: map-get($colors, orange);
+    }
+  }
+
+  & .fa {
+    padding: 0 10px 5px 0;
+    display: inline-block;
+    font-size: 25px;
+    vertical-align: middle;
+  }
+}

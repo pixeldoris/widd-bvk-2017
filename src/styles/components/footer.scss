@@ -1,0 +1,81 @@
+.footer {
+  & a:hover {
+    color: map-get($colors, orange);
+  }
+
+  &.-top {
+    padding: 30px 100px;
+    text-align: center;
+    background: map-get($colors, darkgray);
+
+    & li {
+      padding: 0 10px;
+      font-size: 14px;
+      color: white;
+      font-weight: 600;
+
+      & i {
+        padding: 0 5px;
+        font-size: 25px;
+        vertical-align: middle;
+      }
+    }
+
+    @media screen and (max-width: 560px) {
+      & .mail {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &.-bottom {
+    padding: 30px 100px;
+    color: white;
+    background: map-get($colors, offblack);
+
+    & .-footer-margin {
+      margin-top: 40px;
+    }
+
+    & .pull-right {
+      text-align: right;
+    }
+
+    @media screen and (max-width: 960px) {
+      & .pull-right-tablet {
+        text-align: right;
+      }
+    }
+
+    @media screen and (max-width: 561px) {
+      & .center-on-mobile {
+        text-align: center;
+      }
+    }
+  }
+
+  & .social {
+    margin: 0 2px;
+    font-size: 25px;
+
+    &:hover {
+      cursor: pointer;
+
+      &.-facebook:hover {
+        color: #4267b2;
+      }
+
+      &.-instagram:hover {
+        color: #9b6954;
+      }
+
+      &.-twitter:hover {
+        color: #00aced;
+      }
+
+      &.-linkedin:hover {
+        color: #007bb5;
+      }
+    }
+  }
+}

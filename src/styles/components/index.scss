@@ -1,0 +1,261 @@
+.index {
+  &.-bigimage {
+    position: relative;
+    min-height: 150px;
+    text-align: left;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(/storage/other/header2.png);
+    background-position: bottom;
+  }
+
+  @media screen and (min-width: 961px) {
+    &.-bigimage {
+      margin-top: -40px;
+      height: 700px;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    &.-bigimage {
+      margin-top: -40px;
+      height: 500px;
+    }
+  }
+
+  @media screen and (max-width: 560px) {
+    &.-bigimage {
+      display: none;
+    }
+  }
+}
+
+.breakline {
+  &.-header {
+    height: 2px;
+    width: 10%;
+    margin-bottom: 20px;
+    background: map-get($colors, orange);
+  }
+
+  &.-services {
+    height: 2px;
+    width: 20%;
+    margin: 20px 0;
+    background: map-get($colors, orange);
+  }
+
+  &.-overlay {
+    height: 2px;
+    width: 20%;
+    margin: 15px 0 10px;
+    background: white;
+  }
+}
+
+.text-box {
+  position: absolute;
+  top: 33%;
+  width: 50%;
+  max-width: 670px;
+  margin: 0 5% 0 45%;
+}
+
+.services {
+  padding: 15px;
+
+  & > .grid {
+    background: #f3f3f3;
+    background-clip: padding-box;
+
+    & .img-container {
+      position: relative;
+      width: 100%;
+      height: 220px;
+      overflow: hidden;
+
+      & img {
+        position: absolute;
+        left: -100%;
+        right: -100%;
+        top: -100%;
+        bottom: -100%;
+        margin: auto;
+        min-height: 100%;
+        min-width: 220%;
+      }
+
+      @media screen and (max-width: 561px) {
+        & img {
+          min-width: 100%;
+        }
+      }
+    }
+
+    & > .service-description {
+      padding: 20px;
+    }
+  }
+}
+
+.carousel,
+.gallery-carousel,
+.recent-projects-carousel {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1167px;
+
+  & .grid__column {
+    padding: 10px;
+  }
+
+  & .img-container {
+    position: relative;
+    width: 100%;
+    height: 20vw;
+    max-height: 240px;
+    overflow: hidden;
+
+    & img {
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      top: -100%;
+      bottom: -100%;
+      margin: auto;
+      min-height: 100%;
+      min-width: 100%;
+    }
+  }
+
+  @media screen and (min-width: 961px) {
+    & .img-container {
+      height: 18vw;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    & .img-container {
+      height: 25vw;
+    }
+  }
+
+  @media screen and (max-width: 559px) {
+    & .img-container {
+      height: 50vw;
+    }
+  }
+}
+
+.recent-projects-carousel {
+  & .grid__column {
+    padding: 0 15px 15px;
+  }
+
+  & .grid__column:first-of-type {
+    padding: 0 15px 15px 0;
+  }
+
+  & .grid__column:last-of-type {
+    padding: 0 0 15px 15px;
+  }
+
+  @media screen and (max-width: 960px) {
+    & .img-container {
+      height: 18vw;
+    }
+
+    & .grid__column {
+      padding: 0 10px 15px;
+    }
+
+    & .grid__column:first-of-type {
+      padding: 0 10px 15px 0;
+    }
+
+    & .grid__column:last-of-type {
+      padding: 0 0 15px 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .carousel,
+  .gallery-carousel {
+    margin: 0 40px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .recent-projects-carousel {
+    margin: 0 15px;
+    width: auto;
+  }
+}
+
+.overlay {
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transition: all 0.4s ease-in-out;
+
+    & .overlay-content {
+      opacity: 1;
+      background: rgba(255, 96, 12, 0.78);
+    }
+  }
+
+  & .overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100%;
+    color: white;
+    opacity: 0;
+    background: rgba(255, 96, 12, 0);
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+  }
+
+  & .overlay-info {
+    position: absolute;
+    bottom: 0;
+    padding: 0 15px 15px;
+  }
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: map-get($colors, orange);
+}
+
+.index-cert {
+  width: 100%;
+  background: map-get($colors, lightgray);
+}
+
+.cert-carousel {
+  margin: 3% 40px;
+  padding: 0 15px;
+  width: auto;
+
+  & img {
+    padding: 10px 30px;
+    height: 150px;
+  }
+
+  & .slick-prev::before,
+  & .slick-next::before {
+    color: map-get($colors, gray500);
+  }
+}

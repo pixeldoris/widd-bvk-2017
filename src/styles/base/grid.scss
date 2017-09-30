@@ -6,8 +6,13 @@
   margin-right: auto;
   margin-left: auto;
 
+  &.-bigger {
+    width: 100%;
+    max-width: 1350px;
+  }
+
   &.-fluid {
-    max-width: none;
+    max-width: 100%;
   }
 
   &.-pad {
@@ -26,6 +31,20 @@
     &.-noPad {
       padding-right: 0;
       padding-left: 0;
+    }
+
+    &.-text-center {
+      text-align: center;
+    }
+
+    @media screen and (min-width: 561px) {
+      &.-pull-right-desktop {
+        text-align: right;
+      }
+    }
+
+    &.-pull-right {
+      text-align: right;
     }
 
     &.-desktop {
